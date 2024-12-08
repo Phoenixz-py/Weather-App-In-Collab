@@ -1,0 +1,35 @@
+1. Navigation Bar (navbar) is needed (Add a sticky-top or fixed-top navigation bar with links like Home, About, and Contact, Use navbar-expand-lg for responsive menus.)
+Add a brand/logo and toggle button for mobile views.
+
+
+2. Hero Section (jumbotron or custom header, Use a full-width banner with a gradient background and a centered title.) 
+
+
+3. The CARD U SUGGESTED 
+
+
+4.  Accordion (accordion) (Use an accordion to show FAQs or extra weather information such as 7-day forecast or hourly updates.)
+
+
+5. Modals (modal) (Add a modal popup for advanced weather information such as maps or historical data.Trigger it with the button labeled View More.)
+
+
+6. Footer (footer)
+
+
+7. Progress Bars (progress) (Display the UV index or precipitation probability with a dynamic progress bar.)
+
+
+8. Icons (icons) (Add Bootstrap Icons for different weather conditions, such as sunny, rainy, or windy.)
+
+
+9. Buttons (Provide styled buttons for a number of different actions such as Search, Get Forecast, Download Report.)
+
+
+10. Dropdowns
+Add dropdowns to allow the users to select their preferred unit (°C/°F) or choose a location from recent searches.
+
+11. Spinners (spinner)
+Display a loading spinner during the fetching of weather data from APIs.
+
+12. Custom Themes (White and Balck Theme)
