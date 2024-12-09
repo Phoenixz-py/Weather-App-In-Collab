@@ -4,30 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js"></script>
-
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- #add the bootstrap link -->
 
     <link/>
     <title>Weather App Thing</title>
   </head>
-  <!-- A classwith some background and text color will go -->
-
-  <body class>
+  <!-- A classwith some background and text color will go --> 
+  
+  <body class="p-3 mb-2 bg-dark text-white">
 
     <!-- Container with good display property -->
-    <div class=>
+    <div class="Container-sm">
 
       <!-- App Title -->
        <!-- Add some classes properties to make App Title nice looking -->
-      <div>
-        <!-- Add some classes properties to make App Title nice looking -->
-        <h1>
-          <!-- Add a heading -->
-        </h1>
+        <div class="card text-dark bg-dark mb-3" >
 
-        <!-- add some class ofc -->
-        <p>Get real-time weather updates in style!</p>
-      </div>
+          <div class="card text-center">
+        
+            <!-- Add some classes properties to make App Title nice looking -->
+            <h1 class="card-title">
+              VERY COOL WEATHER APP
+            </h1>
+    
+            <!-- add some class ofc -->
+            <p class="card-body">Get real-time weather updates in style!</p>
+          </div>
+
+        </div>
+     
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="banana.png" class="img-thumbnail" alt="" width="45" height="40">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Who are we
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
       <!-- Weather Input Section -->
        <!-- Add some great bootstrap class for hit  -->
@@ -58,23 +98,23 @@
             id="searchBar"
             class="card-title text-center text-info fw-bold"
           ></h2>
-          <div>
-            <div>
+          <div class="row-align-items-center">
+            <div class="text-dark">
               <p><strong>Temperature:</strong></p>
               <span id="temperature"></span>°C
             </div>
              <!-- Column bootstrap like class="col-md-1-2-3-whataver" -->
-            <div>
+            <div class="text-dark">
               <p><strong>Humidity:</strong></p>
               <span id="humidity"></span>%
             </div>
              <!-- Column bootstrap like class="col-md-1-2-3-whataver" -->
-            <div>
+            <div class="text-dark">
               <p><strong>Wind Speed:</strong></p>
               <span id="windSpeed"></span> m/s
             </div>
             <!-- Column bootstrap like class="col-md-1-2-3-whataver" -->
-            <div>
+            <div class="text-dark">
               <p><strong>UV Index:</strong></p>
               <span id="uvIndex"></span>
             </div>
@@ -83,6 +123,7 @@
       </div>
     </div>
     <!-- Add the script of Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script></script>
   </body>
 </html>
