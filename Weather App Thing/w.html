@@ -26,11 +26,13 @@
         
             <!-- Add some classes properties to make App Title nice looking -->
             <h1 class="display-4 text-primary fw-bold">
-              VERY COOL WEATHER APP
+              Coleo™
             </h1>
     
             <!-- add some class ofc -->
-            <p class="lead">Get real-time weather updates in style!</p>
+            <p class="lead">Nuntios temporis actualis obtine stilose! <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-brightness-alt-high-fill" viewBox="0 0 16 16">
+              <path d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3m8 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5m-13.5.5a.5.5 0 0 0 0-1h-2a.5.5 0 0 0 0 1zm11.157-6.157a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m-9.9 2.121a.5.5 0 0 0 .707-.707L3.05 5.343a.5.5 0 1 0-.707.707zM8 7a4 4 0 0 0-4 4 .5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5 4 4 0 0 0-4-4"/>
+            </svg></p>
           </div>
 
         </div>
@@ -80,9 +82,11 @@
             placeholder="Enter location..."
             aria-label="Search"
           />
-          <button onclick="getWeather()" class="btn btn-primary">
-            Fetch Weather
-          </button>
+          <button onclick="getWeather()" class="btn btn-primary" id="loadButton">Click to Load</button>
+<button class="btn btn-primary" id="loadingButton" style="display: none;" disabled>
+    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    <span class="visually-hidden">Loading...</span>
+</button>
         </div>
       </div>
 
@@ -98,32 +102,114 @@
             id="searchBar"
             class="card-title text-center text-info fw-bold"
           ></h2>
-          <div class="row-align-items-center">
-            <div class="text-dark">
+          <div class="row text-center py-3">
+            <div class="text-dark col-md-3">
               <p><strong>Temperature:</strong></p>
-              <span id="temperature"></span>°C
+              <span id="temperature" class="badge bg-danger fs-5"></span>°C
             </div>
              <!-- Column bootstrap like class="col-md-1-2-3-whataver" -->
-            <div class="text-dark">
+            <div class="text-dark col-md-3">
               <p><strong>Humidity:</strong></p>
-              <span id="humidity"></span>%
+              <span id="humidity" class="badge bg-primary fs-5"></span>%
             </div>
              <!-- Column bootstrap like class="col-md-1-2-3-whataver" -->
-            <div class="text-dark">
+            <div class="text-dark col-md-3">
               <p><strong>Wind Speed:</strong></p>
-              <span id="windSpeed"></span> m/s
+              <span id="windSpeed" class="badge bg-warning fs-5"></span> m/s
             </div>
             <!-- Column bootstrap like class="col-md-1-2-3-whataver" -->
-            <div class="text-dark">
+            <div class="text-dark col-md-3">
               <p><strong>UV Index:</strong></p>
-              <span id="uvIndex"></span>
+              <span id="uvIndex" class="badge bg-success fs-5"></span>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="card m-3">
+
+      <div class="card-footer text-dark">
+
+        <p>FAQ</p>
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+               Who are we
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">At <span class="fw-bold">[Blank™]</span>, we are a team of passionate innovators and weather enthusiasts dedicated to providing you with the most accurate, reliable, and user-friendly weather forecasting experience. Our mission is to help you stay informed and prepared for any weather conditions, whether you're planning your daily commute, a weekend getaway, or just want to know what to expect outside your window. Our team combines cutting-edge technology with a deep understanding of meteorology to deliver real-time weather updates, detailed forecasts, and personalized alerts. We are committed to continuous improvement, ensuring that our app remains a trusted companion for all your weather needs. With a focus on simplicity, accuracy, and user satisfaction, we strive to make <span class="fw-bold">[Blank™]</span> your go-to source for weather information. Thank you for choosing us, and we look forward to helping you navigate the ever-changing skies.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+               Our Mision
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body mb">At <span class="fw-bold">[Blank™]</span>, our mission is to empower individuals with accurate, reliable, and accessible weather information, enabling them to make informed decisions and stay safe in all weather conditions. We are driven by a passion for innovation and a commitment to excellence. Here are the core principles that guide our mission:
+                <ul>
+                  <li> Accuracy and Reliability: We strive to provide the most accurate and up-to-date weather forecasts, leveraging advanced technologies and robust data sources to ensure you have the information you need when you need it.</li>
+                  <li> User-Centric Design: Our app is designed with you in mind, offering an intuitive and user-friendly interface that makes it easy to navigate and understand complex weather data.
+                  </li>
+                  <li> Continuous Improvement: We are dedicated to ongoing innovation, constantly updating and refining our services to meet the evolving needs of our users.</li>
+                  <li>Global Reach: We aim to make high-quality weather information accessible to everyone, regardless of location or device.
+                    Safety and Preparedness: Our goal is to help you stay safe and prepared for any weather event, from mild changes to severe storms, by providing timely alerts and detailed forecasts.</li>
+                </ul>
+           
+            By achieving these goals, we aim to become the trusted weather companion for millions of users worldwide, helping them navigate the complexities of the weather with confidence and ease.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                Our Motivation
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">At<span class="fw-bold">[Blank™]</span>, our motivation stems from a deep understanding of the impact that weather can have on daily life. Here are the key drivers that inspire and motivate us:
+
+                <ul>
+                  <li> Improving Lives: We believe that accurate and reliable weather information can significantly improve people's lives. Whether it's helping you plan a safe commute, prepare for outdoor activities, or stay informed about severe weather events, our goal is to make a positive difference in your daily routine.
+                  </li>
+                  <li> Empowering Decision-Making: We are motivated by the knowledge that our app can empower you to make better decisions. By providing you with timely and accurate weather forecasts, we help you stay one step ahead of the weather, allowing you to plan with confidence.</li>
+                  <li> Innovation and Excellence: Our team is driven by a passion for innovation and a commitment to excellence. We are constantly seeking new ways to improve our services, leveraging the latest technologies and meteorological advancements to deliver the best possible experience.</li>
+                  <li>User Feedback and Community: Your feedback and satisfaction are at the heart of what we do. We are motivated by the positive impact our app has on our users and the community at large. Hearing your stories and seeing how our app makes a difference in your life fuels our dedication to continuous improvement.
+                  </li>
+                  <li>Safety and Preparedness: Above all, our motivation is rooted in a commitment to safety. We understand the critical role that timely and accurate weather information plays in keeping people safe during severe weather events. Our goal is to be a trusted source that you can rely on when it matters most.</li>
+                </ul>
+
+            By staying true to these motivations, we are inspired to continue innovating and improving, ensuring that <span class="fw-bold">[Blank™]</span> remains a valuable and trusted resource for you.</div>
+            </div>
+          </div>
+        </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
     <!-- Add the script of Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script></script>
+    <script>// JavaScript to toggle the buttons
+      document.getElementById('loadButton').addEventListener('click', function button() {
+          document.getElementById('loadButton').style.display = 'none';
+          document.getElementById('loadingButton').style.display = 'block';
+          
+          // Simulates a loading process 
+          setTimeout(function() {
+              document.getElementById('loadingButton').style.display = 'none';
+              document.getElementById('loadButton').style.display = 'block';
+          }, 3000); // Timeout 
+        });</script>
+
+  
   </body>
 </html>
